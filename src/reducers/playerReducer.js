@@ -1,4 +1,4 @@
-export default function batterReducer(state = {batters: []}, action) {
+export default function playerReducer(state = {batters: []}, action) {
     
     switch (action.type) {
         case 'FETCH_BATTERS':

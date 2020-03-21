@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Route, Switch} from 'react-router-dom'
 import {fetchBatters} from '../actions/fetchBatters'
-import Batters from '../components/Batters'
+import BatterCards from '../components/BatterCards'
 import Batter from '../components/Batter'
 
 class BattersContainer extends React.Component {
@@ -16,7 +16,7 @@ class BattersContainer extends React.Component {
             <div>
                 <Switch>
                     <Route path='/batters/:id' render={(routerProps) => <Batter {...routerProps} batters={this.props.batters}/>}/>
-                    <Route exact path='/batters' render={(routerProps) => <Batters {...routerProps} batters={this.props.batters}/>}/>
+                    <Route exact path='/batters' render={(routerProps) => <BatterCards {...routerProps} batters={this.props.batters}/>}/>
                 </Switch>
             </div>
         )
