@@ -1,26 +1,46 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import thunk from 'redux-thunk';
-import reducer from './reducers/reducer'
-import { Provider } from 'react-redux';
-import {createStore, applyMiddleware, compose} from 'redux';
+import { connect } from 'react-redux'
+import { getCurrentUser } from './actions/users'
 import NavBar from './components/NavBar'
-
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-let myStore = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
+import Home from './components/Home'
+import Login from './components/Login'
+import Signup from './components/Signup'
+import { Route, Switch, withRouter, Link } from 'react-router-dom'
+import PitchersContainer from './containers/PitchersContainer'
+import BattersContainer from './containers/BattersContainer'
 
 class App extends React.Component {
+
+    componentDidMount() {
+        this.props.getCurrentUser()
+    }
+
     render () {
-    
-    return (
+        const { loggedIn, decks } = this.props
+        return (
         <div className="App">
-            <Provider store={myStore}>
-                <NavBar /> 
-            </Provider>
+            { loggedIn ? <NavBar deck={this.props.decks}/> : 
+                <span>
+                    <Link to="/signup">Sign Up</Link> or <Link to="/login">Log In</Link>
+                </span> }
+            <Switch>
+                <Route exact path='/' component={Home} />
+                <Route exact path='/signup' render={({history})=><Signup history={history}/>}/>
+                <Route exact path='/login' component={Login} />
+                <Route exact path='/pitchers' component={PitchersContainer} />
+                <Route exact path='/batters' component={BattersContainer} />
+            </Switch>
+
         </div>
     )
     }
 }
 
-export default App;
+const mapStateToProps = state => {
+    return ({
+      loggedIn: !!state.currentUser,
+    })
+  }
+
+export default withRouter(connect(mapStateToProps, { getCurrentUser })(App))

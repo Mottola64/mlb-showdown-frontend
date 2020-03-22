@@ -23,8 +23,6 @@ const BatterCards = () => {
         fetchBatters();
     }, []);
 
-    //Get Current Posts
-
     const indexOfLastBatter = currentPage * battersPerPage;
     const indexOfFirstBatter = indexOfLastBatter - battersPerPage;
     const currentBatters = batters.slice(indexOfFirstBatter, indexOfLastBatter)
@@ -37,7 +35,6 @@ const BatterCards = () => {
             <Pagination battersPerPage={battersPerPage} totalBatters={batters.length} paginate={paginate} />
         </div>
     )
-
 }
 
 export default BatterCards

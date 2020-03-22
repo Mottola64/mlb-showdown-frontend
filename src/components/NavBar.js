@@ -23,17 +23,20 @@ class NavBar extends React.Component {
                                 <Nav.Link href="#home">LogIn</Nav.Link>
                                 <Nav.Link href="#link">Create Account</Nav.Link>
                                     <NavDropdown title="More" id="basic-nav-dropdown">
-                                    <NavDropdown.Item href="#action/3.1">Log In</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">Create Account</NavDropdown.Item>
+                                    <NavDropdown.Item href="/batters">Batters</NavDropdown.Item>
+                                    <NavDropdown.Item href="/signup">Create Account</NavDropdown.Item>
                                     <NavDropdown.Divider />
-                                    <NavDropdown.Item href="#action/3.4">Log Out</NavDropdown.Item>
+                                    <NavDropdown.Item href="/logout">Log Out</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
                             
                         </Navbar.Collapse>
                     </Navbar>
-                    <Route exact path='/pitchers' component={PitchersContainer} />
+                    {/* <Route exact path='/pitchers' component={PitchersContainer} />
                     <Route exact path='/batters' component={BattersContainer} />
+                    <Route exact path='/login' component={Login} />
+                    <Route exact path='/signup' component={Signup} />
+                    <Route exact path='/logout' component={Logout} /> */}
                 </Container>
             </Router>
         )

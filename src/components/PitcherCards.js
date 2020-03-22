@@ -23,8 +23,6 @@ const PitcherCards = () => {
         fetchPitchers();
     }, []);
 
-    //Get Current Posts
-
     const indexOfLastPitcher = currentPage * pitchersPerPage;
     const indexOfFirstPitcher = indexOfLastPitcher - pitchersPerPage;
     const currentPitchers = pitchers.slice(indexOfFirstPitcher, indexOfLastPitcher)
