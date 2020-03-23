@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { connect } from 'react-redux'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
@@ -43,4 +44,10 @@ class NavBar extends React.Component {
     }
 }
 
-export default NavBar;
+const mapStateToProps = state => {
+    return ({
+      loggedIn: !!state.currentUser,
+    })
+  }
+
+export default connect(mapStateToProps)(NavBar);

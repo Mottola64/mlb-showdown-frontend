@@ -1,24 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import './App.css';
+// import './App.css';
 import thunk from 'redux-thunk';
-import currentUser from './reducers/currentUser'
-import loginForm from './reducers/loginForm'
-import signupForm from './reducers/signupForm'
+import batterReducer from './reducers/batterReducer'
 import { Provider } from 'react-redux';
 import {createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import { BrowserRouter as Router } from 'react-router-dom';
+import App from './App';
 
-const reducer = combineReducers({
-    currentUser,
-    loginForm,
-    signupForm
-})
-
+// const reducer = combineReducers({
+//     batterReducer
+// })
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-let myStore = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
+let myStore = createStore(batterReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
     <Provider store={myStore}>
@@ -26,5 +21,5 @@ ReactDOM.render(
             <App />
         </Router>
     </Provider>
-
-, document.getElementById('root'));
+,
+document.getElementById('root'));
