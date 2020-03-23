@@ -1,7 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { connect } from 'react-redux'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
@@ -9,9 +7,9 @@ import { NavDropdown } from 'react-bootstrap';
 import PitchersContainer from '../containers/PitchersContainer';
 import BattersContainer from '../containers/BattersContainer'
 
-class NavBar extends React.Component {
+const NavBar = (props) => {
 
-    render() {
+    
         return (
             <Router>
                 <Container >
@@ -21,33 +19,19 @@ class NavBar extends React.Component {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mr-auto">
-                                <Nav.Link href="#home">LogIn</Nav.Link>
-                                <Nav.Link href="#link">Create Account</Nav.Link>
-                                    <NavDropdown title="More" id="basic-nav-dropdown">
-                                    <NavDropdown.Item href="/batters">Batters</NavDropdown.Item>
-                                    <NavDropdown.Item href="/signup">Create Account</NavDropdown.Item>
-                                    <NavDropdown.Divider />
-                                    <NavDropdown.Item href="/logout">Log Out</NavDropdown.Item>
-                                </NavDropdown>
+                                <Nav.Link href="#batters">Batters</Nav.Link>
+                                <Nav.Link href="#pitchers">Pitchers</Nav.Link>
+                                    
                             </Nav>
                             
                         </Navbar.Collapse>
                     </Navbar>
                     {/* <Route exact path='/pitchers' component={PitchersContainer} />
                     <Route exact path='/batters' component={BattersContainer} />
-                    <Route exact path='/login' component={Login} />
-                    <Route exact path='/signup' component={Signup} />
-                    <Route exact path='/logout' component={Logout} /> */}
+ */}
                 </Container>
             </Router>
         )
-    }
 }
 
-const mapStateToProps = state => {
-    return ({
-      loggedIn: !!state.currentUser,
-    })
-  }
-
-export default connect(mapStateToProps)(NavBar);
+export default NavBar;
