@@ -1,8 +1,129 @@
 body {
-  background-color: #002D72;
-  opacity: 0.80;
+  background-color: #002d72;
+  opacity: 0.8;
 }
- 
+
 .cardInfo {
   background-color: lightblue;
+}
+
+.angels {
+  background-color: #000000;
+}
+
+.astros {
+  background-color: #002d62;
+}
+
+.athletics {
+  background-color: #003831;
+}
+
+.blue-jays {
+  background-color: #134a8e;
+}
+
+.braves {
+  background-color: #13274f;
+}
+
+.brewers {
+  background-color: #0a2351;
+}
+
+.cardinals {
+  background-color: #000066;
+  border: #fedb00;
+}
+
+.cubs {
+  background-color: #0e3386;
+}
+
+.devil_rays {
+  background-color: #092c5c;
+}
+
+.diamondbacks {
+  background-color: #a71930;
+}
+
+.dodgers {
+  background-color: #005a9c;
+}
+
+.expos {
+  background-color: #003087;
+}
+
+.giants {
+  background-color: #000000;
+}
+
+.indians {
+  background-color: #002b5c;
+}
+
+.mariners {
+  background-color: #0c2c56;
+}
+
+.marlins {
+  background-color: #009ca6;
+}
+
+.mets {
+  background-color: #002d72;
+}
+
+.orioles {
+  background-color: #000000;
+}
+
+.padres {
+  background-color: #002d62;
+}
+
+.phillies {
+  background-color: #284898;
+}
+
+.pirates {
+  background-color: #000000;
+}
+
+.rangers {
+  background-color: #003278;
+}
+
+.red_sox {
+  background-color: #0d2b56;
+}
+
+.reds {
+  background-color: #000000;
+}
+
+.rockies {
+  background-color: #333366;
+}
+
+.royals {
+  background-color: #004687;
+}
+
+.tigers {
+  background-color: #0c2c56;
+}
+
+.twins {
+  background-color: #002b5c;
+}
+
+.white_sox {
+  background-color: #000000;
+}
+
+.yankees {
+  background-color: #003087;
 }
