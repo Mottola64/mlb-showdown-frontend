@@ -18,7 +18,7 @@ const NavBar = props => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="#batters">Batters</Nav.Link>
+              <Nav.Link href="/batters">Batters</Nav.Link>
               <Nav.Link href="/pitchers">Pitchers</Nav.Link>
             </Nav>
           </Navbar.Collapse>

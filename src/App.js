@@ -7,15 +7,15 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import thunk from "redux-thunk";
 import batters from "./reducers/batters";
 import pitchers from "./reducers/pitchers";
+import search from "./reducers/search";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose, combineReducers } from "redux";
-import Batters from "./components/Batters";
-import "./App.css";
 import logger from "redux-logger";
 
 const reducer = combineReducers({
   batters,
-  pitchers
+  pitchers,
+  search
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -28,7 +28,7 @@ let myStore = createStore(
 class App extends React.Component {
   render() {
     return (
-      <Provider store={myStore}>
+      <Provider store={myStore} className="App">
         <Router>
           <NavBar />
           {/* <BattersContainer /> */}

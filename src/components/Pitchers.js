@@ -9,30 +9,68 @@ import {
   CardSubtitle,
   CardBody
 } from "reactstrap";
+import SearchBar from "../components/SearchBar";
 
-const Pitchers = props => {
-  // if (loading) {
-  //     return <h2>Loading...</h2>;
-  // }
+class Pitchers extends React.Component {
+  state = {
+    pitchers: this.props.pitchers,
+    query: null
+  };
 
-  return (
-    <CardColumns>
-      {props.pitchers &&
-        props.pitchers.map(({ attributes }) => (
-          <Card key={attributes.id} className="list-group-item">
-            {/* <CardImg top width="100%" src="/assets/256x186.svg" alt="Card image cap" /> */}
-            <CardBody>
-              <CardTitle>{attributes.full_name}</CardTitle>
-              <CardSubtitle>{attributes.team}</CardSubtitle>
-              <CardText>Pts: {attributes.points}</CardText>
-              <CardText>Control: {attributes.control}</CardText>
-              <CardText>Position: {attributes.position}</CardText>
-              <Button>Button</Button>
-            </CardBody>
-          </Card>
-        ))}
-    </CardColumns>
-  );
-};
+  componentDidUpdate(prevProps) {
+    if (prevProps !== this.props) {
+      this.setState({
+        pitchers: this.props.pitchers
+      });
+    }
+  }
 
+  formatTeamClassname = name => name.toLowerCase().replace(" ", "-");
+
+  handleSearchChange = e => {
+    console.log(e.target.value);
+    this.setState({
+      query: e.target.value
+    });
+  };
+
+  render() {
+    const filterPitchers = () => {
+      if (this.state.query) {
+        return this.state.pitchers.filter(pitch => {
+          return pitch.attributes.full_name
+            .toLowerCase()
+            .includes(this.state.query.toLowerCase());
+        });
+      } else {
+        return this.state.pitchers;
+      }
+    };
+
+    return (
+      <div>
+        <SearchBar
+          searchType="pitchers"
+          handleSearchChange={this.handleSearchChange}
+        />
+        <CardColumns>
+          {this.state.pitchers &&
+            filterPitchers().map(({ id, attributes }) => (
+              <Card key={attributes.id} className="list-group-item">
+                {/* <CardImg top width="100%" src="/assets/256x186.svg" alt="Card image cap" /> */}
+                <CardBody>
+                  <CardTitle>{attributes.full_name}</CardTitle>
+                  <CardSubtitle>{attributes.team}</CardSubtitle>
+                  <CardText>Pts: {attributes.points}</CardText>
+                  <CardText>Control: {attributes.control}</CardText>
+                  <CardText>Position: {attributes.position}</CardText>
+                  <Button>Button</Button>
+                </CardBody>
+              </Card>
+            ))}
+        </CardColumns>
+      </div>
+    );
+  }
+}
 export default Pitchers;
