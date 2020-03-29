@@ -3,6 +3,7 @@ import {
   Card,
   Button,
   CardImg,
+  CardHeader,
   CardTitle,
   CardText,
   CardColumns,
@@ -10,6 +11,7 @@ import {
   CardBody
 } from "reactstrap";
 import SearchBar from "../components/SearchBar";
+import images from "../assets/images/braves.svg";
 
 class Batters extends React.Component {
   state = {
@@ -62,10 +64,22 @@ class Batters extends React.Component {
                   attributes.team
                 )} list-group-item `}
               >
-                {/* <CardImg top width="100%" src="/assets/256x186.svg" alt="Card image cap" /> */}
+                <CardImg
+                  top
+                  width="100%"
+                  src={`/assets/images/${this.formatTeamClassname(
+                    attributes.team
+                  )}.svg`}
+                  alt="Card image cap"
+                />
                 <CardBody>
-                  <CardTitle>{attributes.full_name}</CardTitle>
+                  <CardHeader className="text-center" width="100%">
+                    <strong>{attributes.full_name}</strong>
+                  </CardHeader>
+                  <br></br>
                   <CardSubtitle>{attributes.team}</CardSubtitle>
+                  <br></br>
+                  <CardText>Year: {attributes.year_id}</CardText>
                   <CardText>Pts: {attributes.points}</CardText>
                   <CardText>Onbase: {attributes.onbase}</CardText>
                   <CardText>

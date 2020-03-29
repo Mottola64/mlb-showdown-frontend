@@ -1,13 +1,32 @@
 body {
-  background-color: #002d72;
+  background-color: #505357;
 }
 
 .cardInfo {
   background-color: lightblue;
+  margin: 10px;
 }
+
+.mlb {
+  background-color: #a1aec0;
+}
+
+.navbar {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.search {
+  padding-bottom: 20px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+
 
 .angels {
   background-color: #002d62;
+  border-color: #002d62;
 }
 
 .astros {

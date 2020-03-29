@@ -3,6 +3,7 @@ import {
   Card,
   Button,
   CardImg,
+  CardHeader,
   CardTitle,
   CardText,
   CardColumns,
@@ -59,8 +60,14 @@ class Pitchers extends React.Component {
               <Card key={attributes.id} className="list-group-item">
                 {/* <CardImg top width="100%" src="/assets/256x186.svg" alt="Card image cap" /> */}
                 <CardBody>
-                  <CardTitle>{attributes.full_name}</CardTitle>
+                  <CardHeader className="text-center" top width="100%">
+                    <strong>{attributes.full_name}</strong>
+                  </CardHeader>
+                  <br></br>
+
                   <CardSubtitle>{attributes.team}</CardSubtitle>
+                  <br></br>
+                  <CardText>Year: {attributes.year_id}</CardText>
                   <CardText>Pts: {attributes.points}</CardText>
                   <CardText>Control: {attributes.control}</CardText>
                   <CardText>Position: {attributes.position}</CardText>
