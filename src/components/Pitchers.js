@@ -56,8 +56,13 @@ class Pitchers extends React.Component {
         />
         <CardColumns>
           {this.state.pitchers &&
-            filterPitchers().map(({ id, attributes }) => (
-              <Card key={attributes.id} className="list-group-item">
+            filterPitchers().map((pitcher) => {
+              const {id, attributes} = pitcher
+              return (
+              <Card key={attributes.id}
+              className={`${this.formatTeamClassname(
+                attributes.team
+              )} list-group-item `}>
                 {/* <CardImg top width="100%" src="/assets/256x186.svg" alt="Card image cap" /> */}
                 <CardBody>
                   <CardHeader className="text-center" top width="100%">
@@ -71,10 +76,10 @@ class Pitchers extends React.Component {
                   <CardText>Pts: {attributes.points}</CardText>
                   <CardText>Control: {attributes.control}</CardText>
                   <CardText>Position: {attributes.position}</CardText>
-                  <Button>Button</Button>
+                  <Button onClick={() => this.props.addPlayer(pitcher)}>Add Pitcher To Deck</Button>
                 </CardBody>
               </Card>
-            ))}
+            )})}
         </CardColumns>
       </div>
     );

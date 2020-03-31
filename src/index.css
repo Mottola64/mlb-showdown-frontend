@@ -12,17 +12,64 @@ body {
 }
 
 .navbar {
-  margin-bottom: 20px;
-  padding: 20px;
+  color: #000000;
+  font-weight: 750;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
 }
 
 .search {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   margin-left: 25px;
   margin-right: 25px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
 
+h1,
+.h1 {
+  font-size: 2.5rem;
+}
+
+h2,
+.h2 {
+  font-size: 2rem;
+}
+
+h3,
+.h3 {
+  font-size: 1.75rem;
+}
+
+h4,
+.h4 {
+  font-size: 1.5rem;
+}
+
+h5,
+.h5 {
+  font-size: 1.25rem;
+}
+
+h6,
+.h6 {
+  font-size: 1rem;
+}
 
 .angels {
   background-color: #002d62;
@@ -58,7 +105,7 @@ body {
   background-color: #0e3386;
 }
 
-.devil_rays {
+.devil-rays {
   background-color: #092c5c;
 }
 
@@ -114,7 +161,7 @@ body {
   background-color: #003278;
 }
 
-.red_sox {
+.red-sox {
   background-color: #0d2b56;
 }
 
@@ -138,7 +185,7 @@ body {
   background-color: #002b5c;
 }
 
-.white_sox {
+.white-sox {
   background-color: #000000;
 }
 

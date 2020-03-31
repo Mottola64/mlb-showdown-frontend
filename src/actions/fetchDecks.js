@@ -5,7 +5,7 @@ export function fetchDecks() {
       .then(decks =>
         dispatch({
           type: "FETCH_DECKS",
-          payload: decks
+          payload: decks.data
         })
       );
   };

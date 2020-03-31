@@ -1,12 +1,13 @@
 import React from "react";
+import "../index.css";
 
 const Rules = () => {
   return (
     <div>
-      <h1>Welcome To MLB Showdown</h1>
+      <h1 className="h1">Welcome To MLB Showdown</h1>
       <br></br>
 
-      <h2>What Is MLB Showdown?</h2>
+      <h2 className="h2">What Is MLB Showdown?</h2>
       <p>
         MLB Showdown was a strategy card game that put you in the owner's box
         and the manager's seat. Every move is yours to make, from creating a
@@ -14,7 +15,7 @@ const Rules = () => {
         and trading players. It's just like the real Major Leagues.
       </p>
 
-      <h2>General Concept Of The Game</h2>
+      <h2 className="h2">General Concept Of The Game</h2>
       <ul>
         Two players play out the nine innings of a Major League Baseball game
         with teams from the starter deck.
@@ -28,7 +29,7 @@ const Rules = () => {
         Your goal is to score more runs than your opponent does in nine innings.
       </ul>
 
-      <h2>Getting Started</h2>
+      <h2 className="h2">Getting Started</h2>
       <ul>
         Open up the playmat and look at the layout, familiarizing yourself with
         the locations of all the cards during play. Lay the player cards on the
@@ -50,13 +51,13 @@ const Rules = () => {
         roll the 20-sided die (high roll goes first).
       </ul>
 
-      <h2>Play The Game!</h2>
+      <h2 className="h2">Play The Game!</h2>
       <ul>
         Player one puts forward the batter, and player two puts his or her
         pitcher in the middle of the field.
       </ul>
 
-      <h3>Step 1: The Pitch!</h3>
+      <h3 className="h3">Step 1: The Pitch!</h3>
       <ul>
         The pitcher's player rolls the 20-sided die and adds the die roll to the
         Control of the pitcher.
@@ -70,7 +71,7 @@ const Rules = () => {
         the pitcher made a bad pitch (for him at least).
       </ul>
 
-      <h3>Step 2: The Swing!</h3>
+      <h3 className="h3">Step 2: The Swing!</h3>
       <ul>
         The player on offense then rolls the 20-sided die to see the results. If
         the pitch was good (die + Control is greater than hitter's On-Base),

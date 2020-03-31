@@ -1,7 +1,6 @@
 import React from "react";
-import { connect } from "react-redux";
-import { fetchSearchedPlayers } from "../actions/fetchSearchedPlayers";
 import { InputGroup, InputGroupAddon, InputGroupText, Input } from "reactstrap";
+
 class SearchBar extends React.Component {
   state = {
     query: ""
@@ -14,26 +13,17 @@ class SearchBar extends React.Component {
     });
   };
 
-  searchPlayers = e => {
-    e.preventDefault();
-    this.props.fetchSearchedPlayers(this.props.searchType, this.state.query);
-    // mapDispatchToProps for batterSearchAction
-    // pass props.searchType and this.state.query to that action
-    // in side the action/fetch request `/api/v1/${searchType}`
-    //body: {query}
-  };
-
   render() {
     return (
       <div className="search">
-        <InputGroup size="lg" padding="20px">
+        <InputGroup size="md" padding="20px" width="50%">
           <Input
             type="text"
             value={this.state.query}
             onChange={this.onInputChange}
           />
           <InputGroupAddon addonType="append">
-            <InputGroupText>Search</InputGroupText>
+            <InputGroupText className="mb-2 mr-sm-2 mb-sm-0">Search</InputGroupText>
           </InputGroupAddon>
         </InputGroup>
       </div>
@@ -41,4 +31,4 @@ class SearchBar extends React.Component {
   }
 }
 
-export default connect(null, { fetchSearchedPlayers })(SearchBar);
+export default SearchBar;

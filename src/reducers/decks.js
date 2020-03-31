@@ -1,4 +1,4 @@
-export default function deckReducer(state = { decks: [] }, action) {
+export default function decks(state = { decks: [] }, action) {
   switch (action.type) {
     case "FETCH_DECKS":
       return { decks: action.payload };

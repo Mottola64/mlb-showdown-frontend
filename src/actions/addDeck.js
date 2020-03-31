@@ -12,3 +12,11 @@ export const addDeck = data => {
       .then(deck => dispatch({ type: "ADD_DECK", payload: deck }));
   };
 };
+
+// data should be an object like 
+// {
+//   name: "deck name"
+//   batter_ids: [1,2,3]
+//   pitcher_ids: [3,4,5]
+// }
+// const batter_ids = selectedPlayers.batters.map(batter => batter.id)
