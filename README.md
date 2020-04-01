@@ -1,3 +1,12 @@
+Here is a link to my Rails API: https://github.com/Mottola64/mlb-showdown-backend
+
+For my React/Redux portfolio project, I built an app that users could search through baseball cards from MLB Showdown which was a popular baseball strategy card game in the early 2000s. I found csv files online with the card data, so the data for the cards is seeded into my database.
+
+Currently, a user can search through the rendered cards and select pitchers and batters. Once they select their desired cards, they could create a deck out of those cards.
+
+In the future I plan on building user functionality so users could have their own decks, and eventually I can add in functionality to simulate gameplay using the user's card decks.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
