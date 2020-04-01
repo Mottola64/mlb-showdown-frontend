@@ -1,10 +1,10 @@
 import React from "react";
 import { Spinner } from "reactstrap";
 
-const LoadingSpinner = props => {
+const LoadingSpinner = () => {
   return (
     <div>
-      <Spinner style={{ width: "10rem", height: "10rem" }} />
+      <Spinner style={{ width: "3rem", height: "3rem" }} />
     </div>
   );
 };

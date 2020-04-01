@@ -4,24 +4,17 @@ import { fetchBatters } from "../actions/fetchBatters";
 import Batters from "../components/Batters";
 import addPlayerToDeck from "../actions/addPlayerToDeck";
 import SelectedPlayers from "../components/SelectedPlayers";
-import LoadingSpinner from "../components/LoadingSpinner";
+// import LoadingSpinner from "../components/LoadingSpinner";
 
 class BattersContainer extends React.Component {
-  state = {
-    loading: true
-  }
-
   componentDidMount() {
     this.props.fetchBatters();
-    this.setState({ loading: false });
   }
 
   render() {
-    return this.state.loading ? (
-      <LoadingSpinner />
-    ) : (
+    return (
       <div>
-        <SelectedPlayers selectedPlayers={this.props.selectedPlayers} />
+        {this.props.selectedPlayers.batters.length > 0 && (<SelectedPlayers selectedPlayers={this.props.selectedPlayers} />)}
         <Batters
           batters={this.props.batters}
           addPlayer={this.props.addPlayerToDeck}

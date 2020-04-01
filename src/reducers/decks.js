@@ -4,6 +4,8 @@ export default function decks(state = { decks: [] }, action) {
       return { decks: action.payload };
     case "ADD_DECK":
       return { decks: [...state.decks, action.payload] };
+    case "DELETE_DECK":
+      return { decks: action.payload };
     default:
       return state;
   }

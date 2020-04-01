@@ -4,13 +4,13 @@ import {
   Button,
   CardImg,
   CardHeader,
-  CardTitle,
   CardText,
   CardColumns,
   CardSubtitle,
   CardBody
 } from "reactstrap";
 import SearchBar from "../components/SearchBar";
+import teamPictures from '../data/pictures'
 
 class Pitchers extends React.Component {
   state = {
@@ -56,30 +56,46 @@ class Pitchers extends React.Component {
         />
         <CardColumns>
           {this.state.pitchers &&
-            filterPitchers().map((pitcher) => {
-              const {id, attributes} = pitcher
+            filterPitchers().map(pitcher => {
+              const { id, attributes } = pitcher;
               return (
-              <Card key={attributes.id}
-              className={`${this.formatTeamClassname(
-                attributes.team
-              )} list-group-item `}>
-                {/* <CardImg top width="100%" src="/assets/256x186.svg" alt="Card image cap" /> */}
-                <CardBody>
-                  <CardHeader className="text-center" top width="100%">
-                    <strong>{attributes.full_name}</strong>
-                  </CardHeader>
-                  <br></br>
+                <Card
+                  key={attributes.id}
+                  className={`${this.formatTeamClassname(
+                    attributes.team
+                  )} list-group-item `}
+                >
+                
+                  <CardBody>
+                    <CardHeader className="text-center" top width="100%">
+                      <strong>{attributes.full_name}</strong>
+                    </CardHeader>
+                    <div>
+                      <CardImg
+                        top
+                        src={teamPictures[attributes.team]}
+                        style={{
+                          width: "40%",
+                          height: "40%"
+                        }}
+                        alt="Card image cap"
+                      />
+                    </div>
+                    <br></br>
 
-                  <CardSubtitle>{attributes.team}</CardSubtitle>
-                  <br></br>
-                  <CardText>Year: {attributes.year_id}</CardText>
-                  <CardText>Pts: {attributes.points}</CardText>
-                  <CardText>Control: {attributes.control}</CardText>
-                  <CardText>Position: {attributes.position}</CardText>
-                  <Button onClick={() => this.props.addPlayer(pitcher)}>Add Pitcher To Deck</Button>
-                </CardBody>
-              </Card>
-            )})}
+                    <CardSubtitle>{attributes.team}</CardSubtitle>
+                    <br></br>
+                    <CardText>Year: {attributes.year_id}</CardText>
+                    <CardText>Pts: {attributes.points}</CardText>
+                    <CardText>Control: {attributes.control}</CardText>
+                    <CardText>Position: {attributes.position}</CardText>
+                    <Button onClick={() => this.props.addPlayer(pitcher)}>
+                      Add Pitcher To Deck
+                    </Button>
+                  </CardBody>
+                </Card>
+              );
+            })}
         </CardColumns>
       </div>
     );

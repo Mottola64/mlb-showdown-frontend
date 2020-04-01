@@ -4,13 +4,13 @@ import {
   Button,
   CardImg,
   CardHeader,
-  CardTitle,
   CardText,
   CardColumns,
   CardSubtitle,
   CardBody
 } from "reactstrap";
 import SearchBar from "../components/SearchBar";
+import teamPictures from "../data/pictures";
 
 class Batters extends React.Component {
   state = {
@@ -56,52 +56,54 @@ class Batters extends React.Component {
         />
         <CardColumns>
           {this.state.batters &&
-            filterBatters().map((batter) => {
-              const {id, attributes} = batter 
+            filterBatters().map(batter => {
+              const { id, attributes } = batter;
               return (
-              <Card
-                key={attributes.id}
-                className={`${this.formatTeamClassname(
-                  attributes.team
-                )} list-group-item `}
-              >
-                {/* <CardImg
-                  top
-                  width="100%"
-                  src={`/assets/images/${this.formatTeamClassname(
+                <Card
+                  key={attributes.id}
+                  className={`${this.formatTeamClassname(
                     attributes.team
-                  )}.svg`}
-                  alt="Card image cap"
-                /> */}
-                <CardBody>
-                  <CardHeader className="text-center" width="100%">
-                    <strong>{attributes.full_name}</strong>
-                  </CardHeader>
-                  <br></br>
-                  <CardSubtitle>{attributes.team}</CardSubtitle>
-                  <br></br>
-                  <CardText>Year: {attributes.year_id}</CardText>
-                  <CardText>Pts: {attributes.points}</CardText>
-                  <CardText>Onbase: {attributes.onbase}</CardText>
-                  <CardText>
-                    Position: {attributes.starting_position}+
-                    {attributes.fielding_one}
-                  </CardText>
-                  <CardText>
-                    Position:{" "}
-                    {attributes.starting_position_two !== "NULL" &&
-                      attributes.starting_position_two}
-                  </CardText>
-                  {/* <CardText>Position: {batter.starting_position_three}-{batter.fielding_three}</CardText>
+                  )} list-group-item `}
+                >
+                  <CardBody>
+                    <CardHeader className="text-center" width="100%">
+                      <strong>{attributes.full_name}</strong>
+                    </CardHeader>
+                    <br></br>
+                    <CardSubtitle>{attributes.team}</CardSubtitle>
+                    <div>
+                      <CardImg
+                        top
+                        src={teamPictures[attributes.team]}
+                        style={{
+                          width: "40%",
+                          height: "40%"
+                        }}
+                        alt="Card image cap"
+                      />
+                    </div>
+                    <br></br>
+                    <CardText>Year: {attributes.year_id}</CardText>
+                    <CardText>Pts: {attributes.points}</CardText>
+                    <CardText>Onbase: {attributes.onbase}</CardText>
+                    <CardText>
+                      Position: {attributes.starting_position}+
+                      {attributes.fielding_one}
+                    </CardText>
+                    <CardText>
+                      Position:{" "}
+                      {attributes.starting_position_two !== "NULL" &&
+                        attributes.starting_position_two}
+                    </CardText>
+                    {/* <CardText>Position: {batter.starting_position_three}-{batter.fielding_three}</CardText>
 <CardText>Position: {batter.starting_position_four}-{batter.fielding_four}</CardText> */}
-                  <Button
-                    onClick={() => this.props.addPlayer( batter )}
-                  >
-                    Add Batter To Deck
-                  </Button>
-                </CardBody>
-              </Card>
-            )})}
+                    <Button onClick={() => this.props.addPlayer(batter)}>
+                      Add Batter To Deck
+                    </Button>
+                  </CardBody>
+                </Card>
+              );
+            })}
         </CardColumns>
       </div>
     );
