@@ -1,11 +1,9 @@
 import React from "react";
 import { Spinner } from "reactstrap";
 
-const LoadingSpinner = () => {
+const LoadingSpinner = (props) => {
   return (
-    <div>
-      <Spinner style={{ width: "3rem", height: "3rem" }} />
-    </div>
+    <Spinner style={{ width: "10rem", height: "10rem", marginTop: "30%" }} />
   );
 };
 

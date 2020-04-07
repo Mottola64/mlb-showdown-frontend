@@ -7,38 +7,38 @@ import {
   CardText,
   CardColumns,
   CardSubtitle,
-  CardBody
+  CardBody,
 } from "reactstrap";
 import SearchBar from "../components/SearchBar";
-import teamPictures from '../data/pictures'
+import teamPictures from "../data/pictures";
 
 class Pitchers extends React.Component {
   state = {
     pitchers: this.props.pitchers,
-    query: null
+    query: null,
   };
 
   componentDidUpdate(prevProps) {
     if (prevProps !== this.props) {
       this.setState({
-        pitchers: this.props.pitchers
+        pitchers: this.props.pitchers,
       });
     }
   }
 
-  formatTeamClassname = name => name.toLowerCase().replace(" ", "-");
+  formatTeamClassname = (name) => name.toLowerCase().replace(" ", "-");
 
-  handleSearchChange = e => {
+  handleSearchChange = (e) => {
     console.log(e.target.value);
     this.setState({
-      query: e.target.value
+      query: e.target.value,
     });
   };
 
   render() {
     const filterPitchers = () => {
       if (this.state.query) {
-        return this.state.pitchers.filter(pitch => {
+        return this.state.pitchers.filter((pitch) => {
           return pitch.attributes.full_name
             .toLowerCase()
             .includes(this.state.query.toLowerCase());
@@ -56,7 +56,7 @@ class Pitchers extends React.Component {
         />
         <CardColumns>
           {this.state.pitchers &&
-            filterPitchers().map(pitcher => {
+            filterPitchers().map((pitcher) => {
               const { id, attributes } = pitcher;
               return (
                 <Card
@@ -65,7 +65,6 @@ class Pitchers extends React.Component {
                     attributes.team
                   )} list-group-item `}
                 >
-                
                   <CardBody>
                     <CardHeader className="text-center" top width="100%">
                       <strong>{attributes.full_name}</strong>
@@ -76,7 +75,7 @@ class Pitchers extends React.Component {
                         src={teamPictures[attributes.team]}
                         style={{
                           width: "40%",
-                          height: "40%"
+                          height: "40%",
                         }}
                         alt="Card image cap"
                       />

@@ -7,7 +7,7 @@ import {
   Input,
   Table,
   InputGroupAddon,
-  InputGroupText
+  InputGroupText,
 } from "reactstrap";
 import { addDeck } from "../actions/addDeck";
 
@@ -22,7 +22,7 @@ class SelectedPlayers extends React.Component {
     this.setState({ input: event.target.value });
   }
 
-  renderPlayer = attributes => (
+  renderPlayer = (attributes) => (
     <tr key={attributes.id}>
       <td>{attributes.full_name}</td>
       <td>{attributes.team}</td>
@@ -30,20 +30,20 @@ class SelectedPlayers extends React.Component {
     </tr>
   );
 
-  addtoDeck = event => {
+  addtoDeck = (event) => {
     event.preventDefault();
     const batter_ids = this.props.selectedPlayers.batters.map(
-      batter => batter.id
+      (batter) => batter.id
     );
     const pitcher_ids = this.props.selectedPlayers.pitchers.map(
-      pitcher => pitcher.id
+      (pitcher) => pitcher.id
     );
     const data = {
       deck: {
         name: this.state.input,
         batter_ids: batter_ids,
-        pitcher_ids: pitcher_ids
-      }
+        pitcher_ids: pitcher_ids,
+      },
     };
     console.log(data);
     this.props.addDeck(data);
@@ -88,7 +88,7 @@ class SelectedPlayers extends React.Component {
         <Form
           inline
           className="search"
-          onSubmit={event => this.addtoDeck(event)}
+          onSubmit={(event) => this.addtoDeck(event)}
         >
           <FormGroup>
             <InputGroupAddon addonType="prepend">

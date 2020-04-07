@@ -3,13 +3,13 @@ import { InputGroup, InputGroupAddon, InputGroupText, Input } from "reactstrap";
 
 class SearchBar extends React.Component {
   state = {
-    query: ""
+    query: "",
   };
 
-  onInputChange = e => {
+  onInputChange = (e) => {
     this.props.handleSearchChange(e);
     this.setState({
-      query: e.target.value
+      query: e.target.value,
     });
   };
 
@@ -23,7 +23,9 @@ class SearchBar extends React.Component {
             onChange={this.onInputChange}
           />
           <InputGroupAddon addonType="append">
-            <InputGroupText className="mb-2 mr-sm-2 mb-sm-0">Search</InputGroupText>
+            <InputGroupText className="mb-2 mr-sm-2 mb-sm-0">
+              Search
+            </InputGroupText>
           </InputGroupAddon>
         </InputGroup>
       </div>

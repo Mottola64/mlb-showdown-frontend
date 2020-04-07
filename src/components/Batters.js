@@ -7,7 +7,7 @@ import {
   CardText,
   CardColumns,
   CardSubtitle,
-  CardBody
+  CardBody,
 } from "reactstrap";
 import SearchBar from "../components/SearchBar";
 import teamPictures from "../data/pictures";
@@ -15,30 +15,30 @@ import teamPictures from "../data/pictures";
 class Batters extends React.Component {
   state = {
     batters: this.props.batters,
-    query: null
+    query: null,
   };
 
   componentDidUpdate(prevProps) {
     if (prevProps !== this.props) {
       this.setState({
-        batters: this.props.batters
+        batters: this.props.batters,
       });
     }
   }
 
-  formatTeamClassname = name => name.toLowerCase().replace(" ", "-");
+  formatTeamClassname = (name) => name.toLowerCase().replace(" ", "-");
 
-  handleSearchChange = e => {
+  handleSearchChange = (e) => {
     console.log(e.target.value);
     this.setState({
-      query: e.target.value
+      query: e.target.value,
     });
   };
 
   render() {
     const filterBatters = () => {
       if (this.state.query) {
-        return this.state.batters.filter(bat => {
+        return this.state.batters.filter((bat) => {
           return bat.attributes.full_name
             .toLowerCase()
             .includes(this.state.query.toLowerCase());
@@ -56,7 +56,7 @@ class Batters extends React.Component {
         />
         <CardColumns>
           {this.state.batters &&
-            filterBatters().map(batter => {
+            filterBatters().map((batter) => {
               const { id, attributes } = batter;
               return (
                 <Card
@@ -77,7 +77,7 @@ class Batters extends React.Component {
                         src={teamPictures[attributes.team]}
                         style={{
                           width: "40%",
-                          height: "40%"
+                          height: "40%",
                         }}
                         alt="Card image cap"
                       />

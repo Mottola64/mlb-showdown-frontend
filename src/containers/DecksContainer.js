@@ -9,6 +9,14 @@ class DecksContainer extends React.Component {
     this.props.fetchDecks();
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.decks !== this.props.decks) {
+      this.setState({
+        reload: true
+      });
+    }
+  }
+
   render() {
     return (
       <div>
@@ -23,9 +31,9 @@ class DecksContainer extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    decks: state.decks
+    decks: state.decks,
   };
 };
 
