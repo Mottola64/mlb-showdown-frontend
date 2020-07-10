@@ -57,7 +57,7 @@ class Batters extends React.Component {
         <CardColumns>
           {this.state.batters &&
             filterBatters().map((batter) => {
-              const { id, attributes } = batter;
+              const { attributes } = batter;
               return (
                 <Card
                   key={attributes.id}

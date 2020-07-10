@@ -25,22 +25,24 @@ const Deck = (props) => {
   const deck = props.deck;
 
   return (
-    <Table key={deck.id} hover>
-      <thead>
-        <tr>
-          <th>{deck.name}</th>
-          <th>Name</th>
-          <th>Team</th>
-          <th>Position</th>
-          <th>Points</th>
-        </tr>
-      </thead>
-      <tbody>
-        {deck.batters.map((batter) => renderBatter(batter))}
-        {deck.pitchers.map((pitcher) => renderPitcher(pitcher))}
-      </tbody>
+    <div>
+      <Table key={deck.id} hover>
+        <thead>
+          <tr>
+            <th>{deck.name}</th>
+            <th>Name</th>
+            <th>Team</th>
+            <th>Position</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          {deck.batters.map((batter) => renderBatter(batter))}
+          {deck.pitchers.map((pitcher) => renderPitcher(pitcher))}
+        </tbody>
+      </Table>
       <Button onClick={() => props.deleteDeck(deck.id)}>Delete Deck</Button>
-    </Table>
+    </div>
   );
 };
 

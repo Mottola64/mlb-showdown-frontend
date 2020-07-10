@@ -57,7 +57,7 @@ class Pitchers extends React.Component {
         <CardColumns>
           {this.state.pitchers &&
             filterPitchers().map((pitcher) => {
-              const { id, attributes } = pitcher;
+              const { attributes } = pitcher;
               return (
                 <Card
                   key={attributes.id}

@@ -5,6 +5,10 @@ import Decks from "../components/Decks";
 import { deleteDeck } from "../actions/deleteDeck";
 
 class DecksContainer extends React.Component {
+  // state = {
+  //   counter: 0
+  // }
+
   componentDidMount() {
     this.props.fetchDecks();
   }
@@ -12,7 +16,7 @@ class DecksContainer extends React.Component {
   componentDidUpdate(prevProps) {
     if (prevProps.decks !== this.props.decks) {
       this.setState({
-        reload: true
+        reload: true,
       });
     }
   }
@@ -26,6 +30,7 @@ class DecksContainer extends React.Component {
             deleteDeck={this.props.deleteDeck}
           />
         )}
+        <button onClick={this.handleClick}>Click Me!</button>
       </div>
     );
   }

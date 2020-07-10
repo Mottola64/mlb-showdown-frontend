@@ -31,7 +31,6 @@ class PitchersContainer extends React.Component {
             pitchers={this.props.pitchers}
             addPlayer={this.props.addPlayerToDeck}
           />
-          {/* <Route path='/pitchers' render={() => <Pitchers pitchers={this.props.pitchers.data}/>}/>  */}
         </div>
       );
     }

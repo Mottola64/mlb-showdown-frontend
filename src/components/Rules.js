@@ -3,7 +3,14 @@ import "../index.css";
 
 const Rules = () => {
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: "white",
+        marginLeft: "20px",
+        marginRight: "20px",
+        padding: "15px",
+      }}
+    >
       <h1 className="h1">Welcome To MLB Showdown</h1>
       <br></br>
 
@@ -14,6 +21,7 @@ const Rules = () => {
         starting lineup and bringing in a relief pitcher to calling for a steal
         and trading players. It's just like the real Major Leagues.
       </p>
+      <br></br>
 
       <h2 className="h2">General Concept Of The Game</h2>
       <ul>
@@ -28,6 +36,7 @@ const Rules = () => {
       <ul>
         Your goal is to score more runs than your opponent does in nine innings.
       </ul>
+      <br></br>
 
       <h2 className="h2">Getting Started</h2>
       <ul>
@@ -50,12 +59,14 @@ const Rules = () => {
         Determine who goes first. Flipping a coin is the traditional method. Or,
         roll the 20-sided die (high roll goes first).
       </ul>
+      <br></br>
 
       <h2 className="h2">Play The Game!</h2>
       <ul>
         Player one puts forward the batter, and player two puts his or her
         pitcher in the middle of the field.
       </ul>
+      <br></br>
 
       <h3 className="h3">Step 1: The Pitch!</h3>
       <ul>
@@ -70,6 +81,7 @@ const Rules = () => {
         If the result is less than or equal to the On-Base value of the hitter,
         the pitcher made a bad pitch (for him at least).
       </ul>
+      <br></br>
 
       <h3 className="h3">Step 2: The Swing!</h3>
       <ul>
@@ -93,6 +105,7 @@ const Rules = () => {
         Once both teams have made three outs, the inning is over and the
         original hitting team continues with the next player from the lineup.
       </ul>
+      <br></br>
 
       <h2>The Strategy Cards</h2>
       <ul>
