@@ -1,6 +1,6 @@
 export const addDeck = (data) => {
   return (dispatch) => {
-    fetch("http://localhost:3000/api/v1/decks", {
+    fetch("https://mlb-showdown-backend.herokuapp.com/api/v1/decks", {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
