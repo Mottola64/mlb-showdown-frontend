@@ -6,7 +6,9 @@ import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from "reactstrap";
 const NavBar = () => {
   return (
     <Navbar className="navbar" light expand="lg">
-      <NavbarBrand href="/">MLB Showdown</NavbarBrand>
+      <NavbarBrand className="navbar" href="/">
+        MLB Showdown
+      </NavbarBrand>
 
       <Nav className="mr-auto navbar">
         <NavItem>
