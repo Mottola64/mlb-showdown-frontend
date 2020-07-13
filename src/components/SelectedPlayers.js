@@ -66,8 +66,8 @@ class SelectedPlayers extends React.Component {
           </thead>
           <tbody>
             {this.props.selectedPlayers &&
-              this.props.selectedPlayers.batters.map(({ player, attributes }) =>
-                this.renderPlayer(player, attributes)
+              this.props.selectedPlayers.batters.map(({ attributes }) =>
+                this.renderPlayer(attributes)
               )}
           </tbody>
         </Table>
