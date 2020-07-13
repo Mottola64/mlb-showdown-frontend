@@ -8,7 +8,7 @@ const NavBar = () => {
     <Navbar className="navbar" light expand="lg">
       <NavbarBrand href="/">MLB Showdown</NavbarBrand>
 
-      <Nav className="mr-auto " navbar>
+      <Nav className="mr-auto navbar">
         <NavItem>
           <NavLink tag={RRNavLink} to="/batters">
             Batters
