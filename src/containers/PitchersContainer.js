@@ -28,7 +28,7 @@ class PitchersContainer extends React.Component {
           {this.props.selectedPlayers.pitchers.length > 0 && (
             <SelectedPlayers
               selectedPlayers={this.props.selectedPlayers}
-              removePlayer={this.props.removePlayer}
+              removePlayer={this.props.selectedPlayers.pitchers.removePlayer}
             />
           )}
           <Pitchers
