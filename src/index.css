@@ -1,5 +1,5 @@
 body {
-  background-color: #505357;
+  background-color: #f5f5f5;
 }
 
 .cardInfo {
@@ -8,11 +8,14 @@ body {
 }
 
 .mlb {
-  background-color: #a1aec0;
+  background-color: #f5f5f5;
 }
 
 .navbar {
-  color: #000000;
+  background-color: #1b1f3b;
+  border: 5px;
+  border-color: #ff1654;
+  color: #f5f5f5;
   font-weight: 750;
   margin-bottom: 25px;
   padding-bottom: 10px;
@@ -102,150 +105,150 @@ h6,
 }
 
 .brewers {
-  background-color: #13294B;
-  color: #85714D
+  background-color: #13294b;
+  color: #85714d;
 }
 
 .cardinals {
-  background-color: #C41E3A;
-  border: #FEDB00;
-  color: #0C2340
+  background-color: #c41e3a;
+  border: #fedb00;
+  color: #0c2340;
 }
 
 .cubs {
   background-color: #0e3386;
   border-color: #cc3433;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .devil-rays {
   background-color: #092c5c;
-  border-color: #8FBCE6;
-  color: #FFFFFF;
+  border-color: #8fbce6;
+  color: #ffffff;
 }
 
 .diamondbacks {
-  background-color: #A71930;
+  background-color: #a71930;
   border-color: #000000;
-  color: #E3D4AD;
+  color: #e3d4ad;
 }
 
 .dodgers {
   background-color: #005a9c;
-  border-color: #EF3E42;
-  color: #A5ACAF;
+  border-color: #ef3e42;
+  color: #a5acaf;
 }
 
 .expos {
-  background-color: #14225A;
-  border-color: #AB0003;
-  color: #FFFFFF;
+  background-color: #14225a;
+  border-color: #ab0003;
+  color: #ffffff;
 }
 
 .giants {
-  background-color: #FD5A1E;
-  border-color: #27251F;
-  color: #EFD19F;
+  background-color: #fd5a1e;
+  border-color: #27251f;
+  color: #efd19f;
 }
 
 .indians {
-  background-color: #0C2340;
-  border-color: #E31937;
-  color: #FFFFFF;
+  background-color: #0c2340;
+  border-color: #e31937;
+  color: #ffffff;
 }
 
 .mariners {
   background-color: #0c2c56;
-  border-color: #005C5C;
-  color: #C4CED4;
+  border-color: #005c5c;
+  color: #c4ced4;
 }
 
 .marlins {
   background-color: #009ca6;
-  border-color: #8A8D8F;
-  color: #27251F
+  border-color: #8a8d8f;
+  color: #27251f;
 }
 
 .mets {
   background-color: #002d72;
-  border-color: #FF5910;
-  color: #FFFFFF;
+  border-color: #ff5910;
+  color: #ffffff;
 }
 
 .orioles {
   background-color: #000000;
-  border-color: #DF4601;
-  color: #FFFFFF;
+  border-color: #df4601;
+  color: #ffffff;
 }
 
 .padres {
-  background-color: #041E42;
-  border-color: #E35205;
-  color: #FFFFFF;
+  background-color: #041e42;
+  border-color: #e35205;
+  color: #ffffff;
 }
 
 .phillies {
   background-color: #284898;
-  border-color: #E81828;
-  color: #FFFFFF;
+  border-color: #e81828;
+  color: #ffffff;
 }
 
 .pirates {
-  background-color: #27251F;
-  border-color: #E4002B;
-  color: #FFC72C
+  background-color: #27251f;
+  border-color: #e4002b;
+  color: #ffc72c;
 }
 
 .rangers {
-  background-color: #002D72;
-  border-color: #BA0C2F;
-  color: #FFFFFF;
+  background-color: #002d72;
+  border-color: #ba0c2f;
+  color: #ffffff;
 }
 
 .red-sox {
   background-color: #0d2b56;
-  border-color: #BD3039;
-  color: #FFFFFF;
+  border-color: #bd3039;
+  color: #ffffff;
 }
 
 .reds {
-  background-color: #C6011F;
+  background-color: #c6011f;
   border-color: #000000;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .rockies {
-  background-color: #24135F;
-  border-color: #8A8D8F;
-  color: #8A8D8F;
+  background-color: #24135f;
+  border-color: #8a8d8f;
+  color: #8a8d8f;
 }
 
 .royals {
   background-color: #004687;
-  border-color: #BD9B60;
-  color: #FFFFFF;
+  border-color: #bd9b60;
+  color: #ffffff;
 }
 
 .tigers {
-  background-color: #0C2340;
-  border-color: #FA4616;
-  color: #FA4616;
+  background-color: #0c2340;
+  border-color: #fa4616;
+  color: #fa4616;
 }
 
 .twins {
-  background-color: #0C2340;
-  border-color: #BA0C2F;
-  color: #FFFFFF
+  background-color: #0c2340;
+  border-color: #ba0c2f;
+  color: #ffffff;
 }
 
 .white-sox {
-  background-color: #27251F;
-  border-color: #C4CED4;
-  color: #C4CED4
+  background-color: #27251f;
+  border-color: #c4ced4;
+  color: #c4ced4;
 }
 
 .yankees {
   background-color: #003087;
-  border-color: #E4002C;
-  color: #FFFFFF;
+  border-color: #e4002c;
+  color: #ffffff;
 }

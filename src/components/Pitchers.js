@@ -76,6 +76,7 @@ class Pitchers extends React.Component {
                         style={{
                           width: "40%",
                           height: "40%",
+                          backgroundColor: "white",
                         }}
                         alt="Card image cap"
                       />
