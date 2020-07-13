@@ -5,7 +5,6 @@ const Rules = () => {
   return (
     <div
       style={{
-        backgroundColor: "white",
         marginLeft: "20px",
         marginRight: "20px",
         padding: "15px",
