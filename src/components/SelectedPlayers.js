@@ -10,7 +10,6 @@ import {
   InputGroupText,
 } from "reactstrap";
 import { addDeck } from "../actions/addDeck";
-import removePlayer from '../actions/removePlayer'
 
 class SelectedPlayers extends React.Component {
   constructor(props) {
@@ -28,7 +27,7 @@ class SelectedPlayers extends React.Component {
       <td>{attributes.full_name}</td>
       <td>{attributes.team}</td>
       <td>{attributes.points}</td>
-      <button onClick={() => this.props.removePlayer(attributes.id)}></button>
+      <button onClick={() => this.props.removePlayer()}>Remove Player</button>
     </tr>
   );
 
@@ -112,4 +111,4 @@ class SelectedPlayers extends React.Component {
   }
 }
 
-export default connect(null, { addDeck, removePlayer })(SelectedPlayers);
+export default connect(null, { addDeck })(SelectedPlayers);

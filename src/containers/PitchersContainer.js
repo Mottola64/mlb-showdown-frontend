@@ -5,6 +5,7 @@ import Pitchers from "../components/Pitchers";
 import addPlayerToDeck from "../actions/addPlayerToDeck";
 import SelectedPlayers from "../components/SelectedPlayers";
 import LoadingSpinner from "../components/LoadingSpinner";
+import removePlayer from '../actions/removePlayer'
 
 class PitchersContainer extends React.Component {
   componentDidMount() {
@@ -25,7 +26,10 @@ class PitchersContainer extends React.Component {
       return (
         <div>
           {this.props.selectedPlayers.pitchers.length > 0 && (
-            <SelectedPlayers selectedPlayers={this.props.selectedPlayers} />
+            <SelectedPlayers
+              selectedPlayers={this.props.selectedPlayers}
+              removePlayer={this.props.removePlayer}
+            />
           )}
           <Pitchers
             pitchers={this.props.pitchers}
@@ -44,6 +48,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { fetchPitchers, addPlayerToDeck })(
+export default connect(mapStateToProps, { fetchPitchers, addPlayerToDeck, removePlayer })(
   PitchersContainer
 );
