@@ -26,7 +26,7 @@ class BattersContainer extends React.Component {
       return (
         <div>
           {this.props.selectedPlayers.batters.length > 0 && (
-            <SelectedPlayers selectedPlayers={this.props.selectedPlayers} removePlayer={this.props.selectedPlayers.batters.removePlayer}/>
+            <SelectedPlayers selectedPlayers={this.props.selectedPlayers} removePlayer={this.props.removePlayer}/>
           )}
           <Batters
             batters={this.props.batters}

@@ -22,12 +22,12 @@ class SelectedPlayers extends React.Component {
     this.setState({ input: event.target.value });
   }
 
-  renderPlayer = (attributes) => (
+  renderPlayer = (player, attributes) => (
     <tr key={attributes.id}>
       <td>{attributes.full_name}</td>
       <td>{attributes.team}</td>
       <td>{attributes.points}</td>
-      <button onClick={(player) => this.props.removePlayer(player)}>
+      <button onClick={() => this.props.removePlayer(player)}>
         Remove Player
       </button>
     </tr>
@@ -66,8 +66,8 @@ class SelectedPlayers extends React.Component {
           </thead>
           <tbody>
             {this.props.selectedPlayers &&
-              this.props.selectedPlayers.batters.map(({ attributes }) =>
-                this.renderPlayer(attributes)
+              this.props.selectedPlayers.batters.map(({ player, attributes }) =>
+                this.renderPlayer(player, attributes)
               )}
           </tbody>
         </Table>
