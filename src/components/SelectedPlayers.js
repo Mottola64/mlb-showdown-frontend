@@ -27,7 +27,9 @@ class SelectedPlayers extends React.Component {
       <td>{attributes.full_name}</td>
       <td>{attributes.team}</td>
       <td>{attributes.points}</td>
-      <button onClick={() => this.props.removePlayer()}>Remove Player</button>
+      <button onClick={() => this.props.removePlayer(attributes.id)}>
+        Remove Player
+      </button>
     </tr>
   );
 
