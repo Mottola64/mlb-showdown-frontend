@@ -26,7 +26,9 @@ body {
   margin-left: 25px;
   margin-right: 25px;
 }
-
+.navbar-light .navbar-brand {
+  color: #ff1654;
+}
 h1,
 h2,
 h3,
