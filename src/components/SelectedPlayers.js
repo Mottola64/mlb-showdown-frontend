@@ -10,7 +10,7 @@ import {
   InputGroupText,
 } from "reactstrap";
 import { addDeck } from "../actions/addDeck";
-import {removePlayer} from '../actions/removePlayer'
+import removePlayer from '../actions/removePlayer'
 
 class SelectedPlayers extends React.Component {
   constructor(props) {
