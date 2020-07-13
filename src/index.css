@@ -125,89 +125,127 @@ h6,
 }
 
 .diamondbacks {
-  background-color: #005F61;
-  border-color: #5F259F;
-  color: #F2E9EA;
+  background-color: #A71930;
+  border-color: #000000;
+  color: #E3D4AD;
 }
 
 .dodgers {
   background-color: #005a9c;
-  border-color: #005a9c;
+  border-color: #EF3E42;
   color: #A5ACAF;
 }
 
 .expos {
-  background-color: #003087;
+  background-color: #14225A;
+  border-color: #AB0003;
+  color: #FFFFFF;
 }
 
 .giants {
-  background-color: #000000;
+  background-color: #FD5A1E;
+  border-color: #27251F;
+  color: #EFD19F;
 }
 
 .indians {
-  background-color: #002b5c;
+  background-color: #0C2340;
+  border-color: #E31937;
+  color: #FFFFFF;
 }
 
 .mariners {
   background-color: #0c2c56;
+  border-color: #005C5C;
+  color: #C4CED4;
 }
 
 .marlins {
   background-color: #009ca6;
+  border-color: #8A8D8F;
+  color: #27251F
 }
 
 .mets {
   background-color: #002d72;
+  border-color: #FF5910;
+  color: #FFFFFF;
 }
 
 .orioles {
   background-color: #000000;
+  border-color: #DF4601;
+  color: #FFFFFF;
 }
 
 .padres {
-  background-color: #002d62;
+  background-color: #041E42;
+  border-color: #E35205;
+  color: #FFFFFF;
 }
 
 .phillies {
   background-color: #284898;
+  border-color: #E81828;
+  color: #FFFFFF;
 }
 
 .pirates {
-  background-color: #000000;
+  background-color: #27251F;
+  border-color: #E4002B;
+  color: #FFC72C
 }
 
 .rangers {
-  background-color: #003278;
+  background-color: #002D72;
+  border-color: #BA0C2F;
+  color: #FFFFFF;
 }
 
 .red-sox {
   background-color: #0d2b56;
+  border-color: #BD3039;
+  color: #FFFFFF;
 }
 
 .reds {
-  background-color: #000000;
+  background-color: #C6011F;
+  border-color: #000000;
+  color: #FFFFFF;
 }
 
 .rockies {
-  background-color: #333366;
+  background-color: #24135F;
+  border-color: #8A8D8F;
+  color: #8A8D8F;
 }
 
 .royals {
   background-color: #004687;
+  border-color: #BD9B60;
+  color: #FFFFFF;
 }
 
 .tigers {
-  background-color: #0c2c56;
+  background-color: #0C2340;
+  border-color: #FA4616;
+  color: #FA4616;
 }
 
 .twins {
-  background-color: #002b5c;
+  background-color: #0C2340;
+  border-color: #BA0C2F;
+  color: #FFFFFF
 }
 
 .white-sox {
-  background-color: #000000;
+  background-color: #27251F;
+  border-color: #C4CED4;
+  color: #C4CED4
 }
 
 .yankees {
   background-color: #003087;
+  border-color: #E4002C;
+  color: #FFFFFF;
 }
