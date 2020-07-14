@@ -1,6 +1,6 @@
 import React from "react";
 import { Table, Button } from "reactstrap";
-import _ from 'lodash'
+import _ from "lodash";
 
 const Deck = (props) => {
   const renderBatter = (batter) => (
@@ -42,11 +42,13 @@ const Deck = (props) => {
           {deck.pitchers.map((pitcher) => renderPitcher(pitcher))}
         </tbody>
         <tfoot>
-          <tf></tf>
-          <tf></tf>
-          <tf></tf>
-          <tf></tf>
-          <tf>{((_.sum(_.map(deck.batters, d => d.points)))+ (_.sum(_.map(deck.pitchers, d => d.points))))}</tf>
+          <tf>
+            <strong>
+              Deck Total Points:{" "}
+              {_.sum(_.map(deck.batters, (d) => d.points)) +
+                _.sum(_.map(deck.pitchers, (d) => d.points))}
+            </strong>
+          </tf>
         </tfoot>
       </Table>
       <Button onClick={() => props.deleteDeck(deck.id)}>Delete Deck</Button>
