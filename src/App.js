@@ -10,7 +10,6 @@ import batters from "./reducers/batters";
 import pitchers from "./reducers/pitchers";
 import decks from "./reducers/decks";
 import selectedPlayers from "./reducers/selectedPlayers";
-import removeSelectedPlayers from "./reducers/removeSelectedPlayers";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import logger from "redux-logger";
@@ -23,7 +22,6 @@ const reducer = combineReducers({
   pitchers,
   selectedPlayers,
   decks,
-  removeSelectedPlayers,
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
