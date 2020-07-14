@@ -22,14 +22,14 @@ class SelectedPlayers extends React.Component {
     this.setState({ input: event.target.value });
   }
 
-  renderPlayer = (player, attributes) => (
+  renderPlayer = (attributes) => (
     <tr key={attributes.id}>
       <td>{attributes.full_name}</td>
       <td>{attributes.team}</td>
       <td>{attributes.points}</td>
-      <button onClick={() => this.props.removePlayer(player)}>
+      {/* <button onClick={() => this.props.removePlayer()}>
         Remove Player
-      </button>
+      </button> */}
     </tr>
   );
 
