@@ -1,5 +1,5 @@
 export default function removeSelectedPlayers(
-  state = { batters: [], pitchers: [] },
+  state = { batters: [], pitchers: [], selectedPlayers: [] },
   action
 ) {
   switch (action.type) {
@@ -7,10 +7,10 @@ export default function removeSelectedPlayers(
       const currentStateremove = { ...state };
       action.payload.type === "batter"
         ? (currentStateremove.selectedPlayers = [
-            state.filter(({ batter }) => batter !== action.payload),
+            state.batters.filter(({ batter }) => batter !== action.payload),
           ])
         : (currentStateremove.selectedPlayers = [
-            state.filter(({ pitcher }) => pitcher !== action.payload),
+            state.pitchers.filter(({ pitcher }) => pitcher !== action.payload),
           ]);
       return currentStateremove;
     default:
