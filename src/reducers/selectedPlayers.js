@@ -12,12 +12,12 @@ export default function selectedPlayers(
     case "REMOVE_SELECTED_PLAYER":
       let currentStateremove = { ...state };
       action.payload.type === "batter"
-        ? (currentStateremove = [
-            currentStateremove.batters.filter((id) => id !== action.payload.id),
+        ? (currentStateremove.batters = [
+            currentStateremove.batters.filter((id) => id === action.payload.id),
           ])
-        : (currentStateremove = [
+        : (currentStateremove.pitchers = [
             currentStateremove.pitchers.filter(
-              (id) => id !== action.payload.id
+              (id) => id === action.payload.id
             ),
           ]);
       return currentStateremove;
