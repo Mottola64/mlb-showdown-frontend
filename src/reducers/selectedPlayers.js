@@ -10,7 +10,7 @@ export default function selectedPlayers(
         : (currentState.pitchers = [...state.pitchers, action.payload]);
       return currentState;
     case "REMOVE_SELECTED_PLAYER":
-      const currentStateremove = { ...state };
+      const currentStateremove = { state };
       action.payload.type === "batter"
         ? (currentStateremove.batters = [
             currentStateremove.batters.filter(
