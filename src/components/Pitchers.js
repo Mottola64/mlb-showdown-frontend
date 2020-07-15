@@ -93,9 +93,9 @@ class Pitchers extends React.Component {
                       Add Pitcher To Deck
                     </Button>
                     <br></br>
-                    <Button onClick={() => this.props.removePlayer(pitcher)}>
+                    {/* <Button onClick={() => this.props.removePlayer(pitcher)}>
                       Remove Player From Deck
-                    </Button>
+                    </Button> */}
                   </CardBody>
                 </Card>
               );

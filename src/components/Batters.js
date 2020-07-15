@@ -102,9 +102,9 @@ class Batters extends React.Component {
                       Add Batter To Deck
                     </Button>
                     <br></br>
-                    <Button onClick={() => this.props.removePlayer(batter)}>
+                    {/* <Button onClick={() => this.props.removePlayer(batter)}>
                       Remove Player From Deck
-                    </Button>
+                    </Button> */}
                   </CardBody>
                 </Card>
               );
