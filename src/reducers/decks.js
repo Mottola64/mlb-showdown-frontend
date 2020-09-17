@@ -3,7 +3,7 @@ export default function decks(state = { decks: [] }, action) {
     case "FETCH_DECKS":
       return { decks: action.payload };
     case "ADD_DECK":
-      return { decks: [...state.decks, action.payload] };
+      return [...state.decks, action.payload]
     case "DELETE_DECK":
       return { decks: action.payload };
     default:

@@ -115,3 +115,5 @@ class Batters extends React.Component {
   }
 }
 export default Batters;
+
+<CardSubtitle>{dailyScheduledGame.timestamp.toLocaleTimeString()}</CardSubtitle>

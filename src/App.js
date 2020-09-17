@@ -1,4 +1,5 @@
 import React from "react";
+import { BreakpointProvider } from "react-socks";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./components/NavBar";
 import PitchersContainer from "./containers/PitchersContainer";
@@ -35,21 +36,23 @@ class App extends React.Component {
   render() {
     return (
       <div className="mlb">
-        <Provider store={myStore} className="App">
-          <Router>
-            <NavBar />
+        <BreakpointProvider>
+          <Provider store={myStore} className="App">
+            <Router>
+              <NavBar />
 
-            {/* <BattersContainer /> */}
-            {/* <PitchersContainer /> */}
-            <Switch>
-              <Route path="/batters" component={BattersContainer} />
-              <Route path="/pitchers" component={PitchersContainer} />
-              <Route path="/decks" component={DecksContainer} />
-              <Route path="/rules" component={Rules} />
-              <Route exact path="/" component={Home} />
-            </Switch>
-          </Router>
-        </Provider>
+              {/* <BattersContainer /> */}
+              {/* <PitchersContainer /> */}
+              <Switch>
+                <Route path="/batters" component={BattersContainer} />
+                <Route path="/pitchers" component={PitchersContainer} />
+                <Route path="/decks" component={DecksContainer} />
+                <Route path="/rules" component={Rules} />
+                <Route exact path="/" component={Home} />
+              </Switch>
+            </Router>
+          </Provider>
+        </BreakpointProvider>
       </div>
     );
   }

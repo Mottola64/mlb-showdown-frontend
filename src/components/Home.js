@@ -1,5 +1,6 @@
 import React from "react";
 import { Jumbotron, Container } from "reactstrap";
+import Rules from './Rules'
 
 const Home = (props) => {
   return (
@@ -13,6 +14,7 @@ const Home = (props) => {
             face your friends!
           </p>
         </Container>
+        <Rules />
       </Jumbotron>
     </div>
   );
